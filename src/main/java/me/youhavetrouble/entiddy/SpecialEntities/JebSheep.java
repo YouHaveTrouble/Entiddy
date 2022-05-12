@@ -20,7 +20,7 @@ public class JebSheep implements EntiddyInterface {
     }
 
     @Override
-    public boolean isInstance(LivingEntity entity) {
+    public boolean isInstance(@NotNull LivingEntity entity) {
         if (!(entity instanceof Rabbit)) return false;
         return entity.getCustomName() != null && entity.getCustomName().equals("jeb_");
     }

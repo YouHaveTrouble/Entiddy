@@ -22,7 +22,7 @@ public class Johnny implements EntiddyInterface {
     }
 
     @Override
-    public boolean isInstance(LivingEntity entity) {
+    public boolean isInstance(@NotNull LivingEntity entity) {
         if (!(entity instanceof Vindicator)) return false;
         return ((Vindicator) entity).isJohnny();
     }

@@ -23,7 +23,7 @@ public class KillerBunny implements EntiddyInterface {
     }
 
     @Override
-    public boolean isInstance(LivingEntity entity) {
+    public boolean isInstance(@NotNull LivingEntity entity) {
         if (!(entity instanceof Rabbit)) return false;
         return ((Rabbit) entity).getRabbitType().equals(Rabbit.Type.THE_KILLER_BUNNY);
     }

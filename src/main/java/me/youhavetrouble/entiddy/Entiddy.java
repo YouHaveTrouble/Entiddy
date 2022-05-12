@@ -40,6 +40,9 @@ public enum Entiddy {
         entity.setCustomName("Grumm");
     }
 
+    /**
+     * @return True if entity is one of special/easter egg entities
+     */
     public static boolean isSpecialEntity(@NotNull LivingEntity entity) {
         if (entity instanceof Player) return false;
         for (Entiddy enTiddy: Entiddy.values()) {

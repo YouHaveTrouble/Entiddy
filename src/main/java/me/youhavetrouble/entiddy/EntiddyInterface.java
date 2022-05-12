@@ -15,6 +15,9 @@ public interface EntiddyInterface {
      */
     Entity spawn(@NotNull Location location, @NotNull CreatureSpawnEvent.SpawnReason spawnReason);
 
-    boolean isInstance(LivingEntity entity);
+    /**
+     * @return True if the entity is an instance of the specific special/easter egg type
+     */
+    boolean isInstance(@NotNull LivingEntity entity);
 
 }
