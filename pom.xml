@@ -9,7 +9,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>EnTiddy</name>
+    <name>Entiddy</name>
 
     <description>A very serious library concerning entities</description>
     <properties>
