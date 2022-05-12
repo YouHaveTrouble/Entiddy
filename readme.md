@@ -25,7 +25,7 @@ Current version: [![](https://jitpack.io/v/YouHaveTrouble/Entiddy.svg)](https://
 
 ### Gradle
 
-```json
+```
 allprojects {
 	repositories {
 		...
@@ -34,8 +34,8 @@ allprojects {
 }
 ```
 
-```json
+```
 dependencies {
-    implementation 'com.github.YouHaveTrouble:Entiddy:v1.0'
+    implementation 'com.github.YouHaveTrouble:Entiddy:VERSION'
 }
 ```
