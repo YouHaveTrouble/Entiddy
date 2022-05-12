@@ -4,6 +4,7 @@ package me.youhavetrouble.entiddy;
 import me.youhavetrouble.entiddy.SpecialEntities.JebSheep;
 import me.youhavetrouble.entiddy.SpecialEntities.Johnny;
 import me.youhavetrouble.entiddy.SpecialEntities.KillerBunny;
+import me.youhavetrouble.entiddy.SpecialEntities.Toast;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -13,7 +14,8 @@ public enum Entiddy {
 
     KILLER_BUNNY(EntityType.RABBIT, new KillerBunny()),
     JEB_SHEEP(EntityType.SHEEP, new JebSheep()),
-    JOHNNY(EntityType.VINDICATOR, new Johnny());
+    JOHNNY(EntityType.VINDICATOR, new Johnny()),
+    TOAST(EntityType.RABBIT, new Toast());
 
     private final EntityType entityType;
     private final EntiddyInterface entiddy;
