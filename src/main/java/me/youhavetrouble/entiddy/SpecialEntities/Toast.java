@@ -1,6 +1,7 @@
 package me.youhavetrouble.entiddy.SpecialEntities;
 
 import me.youhavetrouble.entiddy.EntiddyInterface;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -16,7 +17,8 @@ public class Toast implements EntiddyInterface {
         if (location.getWorld() == null) {
             throw new NullPointerException("World cannot be null");
         }
-        return location.getWorld().spawnEntity(location, EntityType.RABBIT, spawnReason, (entity) -> entity.setCustomName("Toast"));
+        return location.getWorld().spawnEntity(location, EntityType.RABBIT, spawnReason,
+                (entity) -> entity.customName(Component.text("Toast")));
     }
 
     @Override
