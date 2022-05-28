@@ -5,6 +5,7 @@ import me.youhavetrouble.entiddy.SpecialEntities.JebSheep;
 import me.youhavetrouble.entiddy.SpecialEntities.Johnny;
 import me.youhavetrouble.entiddy.SpecialEntities.KillerBunny;
 import me.youhavetrouble.entiddy.SpecialEntities.Toast;
+import net.kyori.adventure.text.Component;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -57,7 +58,7 @@ public enum Entiddy {
      */
     public static void upsideDown(@NotNull LivingEntity entity) {
         if (entity instanceof Player) return;
-        entity.setCustomName("Grumm");
+        entity.customName(Component.text("Grumm"));
     }
 
     /**
