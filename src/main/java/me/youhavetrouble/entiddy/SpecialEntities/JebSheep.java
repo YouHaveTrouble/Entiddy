@@ -16,13 +16,15 @@ public class JebSheep implements EntiddyInterface {
         if (location.getWorld() == null) {
             throw new NullPointerException("World cannot be null");
         }
-        return location.getWorld().spawnEntity(location, EntityType.SHEEP, spawnReason,
-                (entity) -> entity.customName(Component.text("jeb_")));
+        return location.getWorld().spawnEntity(location, EntityType.SHEEP, spawnReason, (entity) -> {
+                    entity.customName(Component.text("jeb_"));
+                    entity.setCustomNameVisible(false);
+                });
     }
 
     @Override
     public boolean isInstance(@NotNull LivingEntity entity) {
         if (!(entity instanceof Sheep)) return false;
-        return entity.customName() != null && Objects.equals(entity.customName(), Component.text("jeb_"));
+        return Objects.equals(entity.customName(), Component.text("jeb_"));
     }
 }

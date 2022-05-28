@@ -10,6 +10,8 @@ import org.bukkit.entity.Rabbit;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class Toast implements EntiddyInterface {
 
     @Override
@@ -18,12 +20,15 @@ public class Toast implements EntiddyInterface {
             throw new NullPointerException("World cannot be null");
         }
         return location.getWorld().spawnEntity(location, EntityType.RABBIT, spawnReason,
-                (entity) -> entity.customName(Component.text("Toast")));
+                (entity) -> {
+                    entity.customName(Component.text("Toast"));
+                    entity.setCustomNameVisible(false);
+                });
     }
 
     @Override
     public boolean isInstance(@NotNull LivingEntity entity) {
         if (!(entity instanceof Rabbit)) return false;
-        return entity.getCustomName() != null && entity.getCustomName().equals("Toast");
+        return Objects.equals(entity.customName(), Component.text("Toast"));
     }
 }
